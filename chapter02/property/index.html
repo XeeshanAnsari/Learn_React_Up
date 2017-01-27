@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Property</title>
+    <script src="js/react-dom.js"></script>
+    <script src="js/react.js"></script>
+</head>
+<body>
+    <div id="app"> </div>
+    <script>
+       var myComponent = React.createClass({
+           render: function() {
+               return React.DOM.h1(null,"property name is " + this.props.name );
+           }
+       });
+       
+       ReactDOM.render(
+          React.createElement(myComponent,
+          {
+              name: 'bob'
+          }),
+          document.getElementById('app')
+       );
+       
+       
+       
+        
+    </script>
+</body>
+</html>
