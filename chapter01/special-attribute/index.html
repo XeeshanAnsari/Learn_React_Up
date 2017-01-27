@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attribute special</title>
+    <script src="js/react-dom.js"></script>
+    <script src="js/react.js"></script>
+</head>
+<body>
+    <div id="app"> </div>
+    <script>
+       ReactDOM.render(
+          React.DOM.h1({
+              className:'myHeading',  // use className instead of class
+              htmlFor: 'me',       // Use htmlFor instead of for
+              style: {        // style use in object style
+                  color:'blue', 
+                  fontSize:'2em'     // use camelCase
+              }
+            },
+               "Hello World!"),
+          document.getElementById("app")
+         );
+        
+    </script>
+</body>
+</html>
