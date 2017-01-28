@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>propsTypes</title>
+    <script src="js/react-dom.js"></script>
+    <script src="js/react.js"></script>
+</head>
+<body>
+    <div id="app"> </div>
+    <script>
+       
+       var  myComponent = React.createClass({
+           propTypes: {
+                 firstName: React.PropTypes.string.isRequired,
+                 middleName: React.PropTypes.string,
+                 familyName: React.PropTypes.string.isRequired,
+                 address: React.PropTypes.string,
+            },
+           
+           
+ 
+                  getDefaultProps: function() {
+                        return {
+                          middleName: '',
+                          address: 'n/a',
+                           };
+                         },
+
+           render: function (){
+            return  React.DOM.h1(this.props,
+                    React.DOM.h1(null , this.props.firstName + this.props.lastName)
+            );
+           }
+           
+       });
+       ReactDOM.render(
+           React.createElement(myComponent,
+           {
+              firstName: 'Xeeshan',
+              lastName: 'Ansari'
+           }),
+            document.getElementById('app') 
+       );
+       
+       
+       
+        
+    </script>
+</body>
+</html>
